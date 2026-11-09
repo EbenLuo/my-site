@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The useless machine — Learning HTML</title>
+  <meta name="description" content="A switch that turns itself off, and a twenty-second game: catch the bug.">
+  <link rel="canonical" href="https://ebenluo.github.io/my-site/machine.html">
+  <meta property="og:title" content="The useless machine — Learning HTML">
+  <meta property="og:description" content="A switch that turns itself off, and a twenty-second game: catch the bug.">
+  <meta property="og:image" content="https://ebenluo.github.io/my-site/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://ebenluo.github.io/my-site/machine.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="images/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="nav.js" defer></script>
+  <script src="machine.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span> Learning HTML</a>
+    <div class="nav-mount" data-nav></div>
+  </header>
+
+  <main id="main">
+    <section class="page-intro" aria-labelledby="machine-title">
+      <p class="eyebrow">Two toys</p>
+      <h1 id="machine-title">One switch. One game.</h1>
+      <p class="lede">A useless machine has one job: to turn itself off. A small game has one job too: to be played for twenty seconds and then stop. Both are built with plain JavaScript.</p>
+    </section>
+
+    <section class="section machine-section" aria-labelledby="useless-title">
+      <div class="section-head">
+        <p class="eyebrow">Toy 01</p>
+        <h2 id="useless-title">The useless machine</h2>
+        <p>Press the switch. The machine will turn it off again. That is the whole idea.</p>
+      </div>
+
+      <div class="machine-device" id="machine-device">
+        <div class="machine-face" aria-hidden="true"><span class="machine-slot"></span></div>
+        <div class="machine-arm" aria-hidden="true"><span class="machine-hand"></span></div>
+        <button class="switch" id="machine-switch" type="button" aria-pressed="false">
+          <span class="switch-label">Press the switch</span>
+        </button>
+      </div>
+      <p class="machine-status" id="machine-status" role="status" aria-live="polite">The machine is off. Please leave it off.</p>
+    </section>
+
+    <section class="section game-section" aria-labelledby="game-title">
+      <div class="section-head">
+        <p class="eyebrow">Toy 02</p>
+        <h2 id="game-title">Catch the bug</h2>
+        <p>Twenty seconds. Tap the bug. It moves every time you catch it — and every time you miss.</p>
+      </div>
+
+      <div class="game">
+        <div class="game-hud">
+          <p>Score <strong id="game-score">0</strong></p>
+          <p>Time <strong id="game-time">20</strong>s</p>
+        </div>
+        <div class="game-grid" id="game-grid" role="group" aria-label="Nine cells. Catch the bug."></div>
+        <p class="game-status" id="game-status" role="status" aria-live="polite">Press start. The bug appears in one cell.</p>
+        <div class="game-actions">
+          <button class="button" id="game-start" type="button">Start</button>
+        </div>
+      </div>
+      <noscript><p class="source-note">Both toys need JavaScript. The rest of the site works without it.</p></noscript>
+    </section>
+
+    <section class="section section--split" aria-labelledby="how-title">
+      <div>
+        <p class="eyebrow">Under the hood</p>
+        <h2 id="how-title">What the JavaScript does</h2>
+        <p>Neither toy needs a library. The machine listens for one click, adds a class and uses a timeout to put the switch back. The game creates nine buttons, picks a random index and runs a one-second interval.</p>
+      </div>
+      <aside class="note" aria-label="Accessibility note">
+        <p class="note-label">Accessibility</p>
+        <p>The switch is a real button with <code>aria-pressed</code>. The game cells are buttons, and the score and status are announced with <code>aria-live</code>. Both work from the keyboard.</p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Learning HTML · Web Technologies 2026 · BiUH</p>
+    <p>Built by Eben Luo. <a href="https://github.com/EbenLuo/my-site">Source on GitHub</a>.</p>
+  </footer>
+</body>
+</html>
