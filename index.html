@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning HTML — a small site built by hand</title>
+  <meta name="description" content="The learning website for Web Technologies 2026: four pages, one stylesheet and a little JavaScript.">
+  <link rel="canonical" href="https://ebenluo.github.io/my-site/">
+  <meta property="og:title" content="Learning HTML — a small site built by hand">
+  <meta property="og:description" content="Four pages, one stylesheet and a little JavaScript. Built for Web Technologies 2026.">
+  <meta property="og:image" content="https://ebenluo.github.io/my-site/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://ebenluo.github.io/my-site/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="images/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="nav.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span> Learning HTML</a>
+    <div class="nav-mount" data-nav></div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Web Technologies 2026 · BiUH</p>
+        <h1 id="hero-title">A small site,<br><span>built by hand.</span></h1>
+        <p class="lede">Four pages, one stylesheet and a little JavaScript. This is the learning website from the course: structure first, then style, then behaviour.</p>
+        <p class="hero-actions">
+          <a class="button" href="quotes.html">Read the quotes</a>
+          <a class="button button--ghost" href="machine.html">Try the machine</a>
+        </p>
+      </div>
+      <figure class="hero-figure">
+        <img src="images/hero.jpg" alt="A laptop, a notebook, a phone and books on a wooden desk, seen from above." width="1200" height="800">
+        <figcaption>Photo: Aleksi Tappura / Unsplash, via Wikimedia Commons (CC0). A desk and a notebook — the site starts on paper.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section" aria-labelledby="inside-title">
+      <div class="section-head">
+        <p class="eyebrow">Inside</p>
+        <h2 id="inside-title">Three things to try</h2>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <p class="card-number">01</p>
+          <h3><a href="quotes.html">A quote collection</a></h3>
+          <p>Sixteen lines about the web, learning and simplicity — and a hero that picks one at random.</p>
+        </article>
+        <article class="card">
+          <p class="card-number">02</p>
+          <h3><a href="project.html">Five project ideas</a></h3>
+          <p>Small, real ideas with a reader, four pages and a smallest version. The planning page for a project.</p>
+        </article>
+        <article class="card">
+          <p class="card-number">03</p>
+          <h3><a href="machine.html">A useless machine</a></h3>
+          <p>A switch that turns itself off, plus a small game. One control, one surprise, back to the start.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--split" aria-labelledby="built-title">
+      <div>
+        <p class="eyebrow">How it is built</p>
+        <h2 id="built-title">Structure, style, behaviour</h2>
+        <p>The site follows the course: semantic HTML first, one external stylesheet, then JavaScript only where it earns its place.</p>
+        <ul class="check-list">
+          <li>Semantic landmarks, one <code>h1</code> per page, and a skip link.</li>
+          <li>Navigation written once in <code>nav.html</code>, injected by <code>nav.js</code>.</li>
+          <li>Responsive grid and fluid type; it works on a phone.</li>
+          <li>No framework, no build step, no server, no database.</li>
+        </ul>
+      </div>
+      <aside class="note" aria-label="Course note">
+        <p class="note-label">The brief</p>
+        <p>Four pages, working navigation, one interaction, live online. The site is in English, like the course.</p>
+        <p><a href="https://webtech.landrock.io" rel="noopener">webtech.landrock.io</a></p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Learning HTML · Web Technologies 2026 · BiUH</p>
+    <p>Built by Eben Luo. <a href="https://github.com/EbenLuo/my-site">Source on GitHub</a>.</p>
+  </footer>
+</body>
+</html>

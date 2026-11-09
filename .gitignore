@@ -1,0 +1,9 @@
+# Local tooling for screenshots and audits
+.tools/
+
+# Rendered design sources; the exported images are in images/
+design/*.png
+
+# Editor and OS noise
+.DS_Store
+Thumbs.db
